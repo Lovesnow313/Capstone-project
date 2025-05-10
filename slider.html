@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <!--slider-->
+    <section>
+        <img class="myslides" src="garden-rose-red-pink-56866.webp" style="height: 500px;">
+        <img class="myslides" src="pexels-photo-736230.webp" style="height: 500px;">
+    </section>
+
+    <script>
+        var myIndex = 0;
+        carousal();
+
+        function carousal(){
+            var i;
+            var x = document.getElementsByClassName("myslides");
+
+
+         for( i = 0 ; i< x.length; i++){
+              x[i].style.display = "none";  
+         }
+         myIndex++;
+         
+         if(myIndex > x.length){
+             myIndex = 1;
+         }
+         x[myIndex-1].style.display ="block";
+
+         setTimeout(carousal , 3000);
+             
+           
+        }
+    </script>
+</body>
+</html>
